@@ -1,0 +1,41 @@
+/* Import Font Inter từ Google Fonts để có nét chữ hiện đại */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* Reset CSS & Khai báo biến màu sắc */
+:root {
+    --black: #111111;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #707072;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* Kiểu dáng cho Link bỏ gạch chân */
+a {
+    text-decoration: none;
+    color: var(--black);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--dark-gray);
+}
+
+/* Các lớp tiện ích (Utility classes) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
