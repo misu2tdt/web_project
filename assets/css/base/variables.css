@@ -1,0 +1,42 @@
+/* ============================================================
+   variables.css — Biến CSS toàn site
+   
+   Định nghĩa 1 lần tại đây, dùng lại ở mọi file CSS khác.
+   Khi cần thay đổi màu sắc, font, spacing → chỉ sửa file này.
+   ============================================================ */
+
+:root {
+    /* ---- Màu sắc chính ---- */
+    --black:          #111111;
+    --white:          #ffffff;
+    --gray-light:     #f5f5f5;
+    --gray-mid:       #e5e5e5;
+    --gray-dark:      #757575;
+    --red-sale:       #fe0000;    /* Màu chữ Sale */
+    --orange-badge:   #ff6600;    /* Màu badge giỏ hàng */
+
+    /* ---- Typography ---- */
+    --font-display:   'Bebas Neue', sans-serif;  /* Logo, heading lớn */
+    --font-body:      'Barlow', sans-serif;       /* Nội dung thông thường */
+
+    /* ---- Kích thước header ---- */
+    --header-height:  60px;
+    --topbar-height:  36px;
+
+    /* ---- Spacing (khoảng cách) ---- */
+    --padding-x:        36px;   /* Padding ngang desktop */
+    --padding-x-mobile: 16px;   /* Padding ngang mobile */
+
+    /* ---- Transition (hiệu ứng chuyển động) ---- */
+    --transition-fast:  0.2s ease;
+    --transition-med:   0.35s ease;
+
+    /* ---- Z-index layers ----
+       Quy định thứ tự hiển thị các lớp element
+       Tránh z-index chiến tranh (ai cũng set 9999)
+    ---- */
+    --z-header:   100;   /* Header cố định */
+    --z-dropdown: 200;   /* Dropdown menu */
+    --z-overlay:  290;   /* Overlay tối mobile */
+    --z-mobile:   300;   /* Mobile menu panel */
+}
