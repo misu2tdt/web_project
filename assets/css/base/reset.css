@@ -1,0 +1,63 @@
+/* ============================================================
+   reset.css — Reset & Base styles
+   
+   Xóa style mặc định của trình duyệt để tất cả trình duyệt
+   hiển thị giống nhau (Chrome, Firefox, Safari, Edge).
+   ============================================================ */
+
+/* Reset tất cả element */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Padding không làm tăng kích thước element */
+}
+
+html {
+    scroll-behavior: smooth;  /* Cuộn mượt khi click anchor link */
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--black);
+    background: var(--white);
+
+    /*
+        Đẩy nội dung xuống đúng chiều cao header + topbar
+        Vì header được position: fixed (không chiếm không gian)
+        Nếu không có padding-top này, content sẽ bị header che
+    */
+    padding-top: calc(var(--topbar-height) + var(--header-height));
+}
+
+/* Reset link */
+a {
+    text-decoration: none;
+    color: inherit;  /* Kế thừa màu từ parent, không hiện màu xanh mặc định */
+}
+
+/* Reset list */
+ul {
+    list-style: none;
+}
+
+/* Reset button */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: var(--font-body);  /* Button mặc định không kế thừa font */
+}
+
+/* Reset input */
+input, textarea, select {
+    font-family: var(--font-body);
+    font-size: inherit;
+}
+
+/* Reset image */
+img {
+    max-width: 100%;      /* Ảnh không tràn ra ngoài container */
+    height: auto;
+    display: block;       /* Bỏ khoảng trắng thừa dưới ảnh (inline gap) */
+}
